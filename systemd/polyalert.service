@@ -1,0 +1,21 @@
+[Unit]
+Description=PolyAlert Telegram Bot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=polyalert
+Group=polyalert
+WorkingDirectory=/opt/polyalert
+EnvironmentFile=/opt/polyalert/.env
+ExecStart=/opt/polyalert/.venv/bin/python -m polyalert
+Restart=always
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+NoNewPrivileges=yes
+PrivateTmp=yes
+
+[Install]
+WantedBy=multi-user.target

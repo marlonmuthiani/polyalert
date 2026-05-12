@@ -1,0 +1,27 @@
+# Secrets
+.env
+.env.local
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Database / runtime
+*.db
+*.db-wal
+*.db-shm
+backups/
+logs/
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
